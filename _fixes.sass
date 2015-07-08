@@ -5,8 +5,10 @@ body
   -webkit-font-smoothing: antialiased // Choromeの文字の滲み対策
   -webkit-text-size-adjust: 100% // iOS Safariで文字サイズが自動調整されて大きく表示されてしまうことへの対策
 
-*
-  max-height: 100% // Android Chromeで高さがないと文字が大きくなってしまうバグ対応
+// Android Chromeで高さがないと文字が大きくなってしまうバグ対応
+// [注意]ただし、GoogleMapsを使う場合は、これが原因でMarkerが表示されない、拡大縮小のUIの表示が乱れる、などの不具合が生じる
+// *
+//   max-height: 100%
 
 img
   border: 0 // IE対策
