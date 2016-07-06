@@ -1,5 +1,3 @@
-@import "compass/css3"
-
 @mixin grad($top_color: #ffffff, $bottom_color: #e6e6e6)
   background-color: $bottom_color
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $top_color), color-stop(100%, $bottom_color))
@@ -21,39 +19,39 @@
   background: -ms-linear-gradient($top_color $per, $bottom_color 100%)
 
 @mixin radius($size)
-  @include border-radius($size)
+  border-radius: $size
 
 @mixin radius-top($size)
   // @include border-top-left-radius(0)
   // @include border-top-right-radius(0)
   // IE7,8では位置毎の指定（上記）が無効になるため、両方丸める方向で調整
-  @include border-radius($size)
-  @include border-bottom-left-radius(0)
-  @include border-bottom-right-radius(0)
+  border-radius: $size
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
 
 @mixin radius-bottom($size)
   // @include border-top-left-radius(0)
   // @include border-top-right-radius(0)
   // IE7,8では位置毎の指定（上記）が無効になるため、両方丸める方向で調整
-  @include border-radius($size)
-  @include border-top-left-radius(0)
-  @include border-top-right-radius(0)
+  border-radius: $size
+  border-top-left-radius: 0
+  border-top-right-radius: 0
 
 @mixin radius-left($size)
   // @include border-top-left-radius(0)
   // @include border-bottom-left-radius(0)
   // IE7,8では位置毎の指定（上記）が無効になるため、両方丸める方向で調整
-  @include border-radius($size)
-  @include border-top-right-radius(0)
-  @include border-bottom-right-radius(0)
+  border-radius: $size
+  border-top-right-radius: 0
+  border-bottom-right-radius: 0
 
 @mixin radius-right($size)
   // @include border-top-right-radius(0)
   // @include border-bottom-right-radius(0)
   // IE7,8では位置毎の指定（上記）が無効になるため、両方丸める方向で調整
-  @include border-radius($size)
-  @include border-top-left-radius(0)
-  @include border-bottom-left-radius(0)
+  border-radius: $size
+  border-top-left-radius: 0
+  border-bottom-left-radius: 0
 
 // 背景画像に画像を読み込んで中のspanは消す
 @mixin bgimage($width, $height, $background-image, $background-repeat: no-repeat, $background-position: center)
