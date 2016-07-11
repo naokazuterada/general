@@ -20,37 +20,37 @@ table, caption, tbody, tfoot, thead, tr, th, td
   background: transparent;
 }
 
-body 
+body
 {
   line-height: 1;
 }
-ol, ul 
+ol, ul
 {
   list-style: none;
 }
-blockquote, q 
+blockquote, q
 {
   quotes: none;
 }
 
 /* remember to define focus styles! */
-:focus 
+:focus
 {
   outline: 0;
 }
 
 /* remember to highlight inserts somehow! */
-ins 
+ins
 {
   text-decoration: none;
 }
-del 
+del
 {
   text-decoration: line-through;
 }
 
 /* tables still need 'cellspacing="0"' in the markup */
-table 
+table
 {
   border-collapse: collapse;
   border-spacing: 0;
