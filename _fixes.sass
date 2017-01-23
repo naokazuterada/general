@@ -23,3 +23,12 @@ a span
 
 .overlay
   cursor: pointer // iOSのSafariでクリックイベントが拾えるように
+
+// iOSでページロード直後に勝手にリサイズが発生し、
+// その結果、最終的に半端な位置までスクロールしてしまう症状の対策
+// https://boagworld.com/dev/ios-safari-resizing-issues/
+html,body
+  height: 100%
+  overflow: auto
+  margin: 0
+  -webkit-overflow-scrolling: touch
