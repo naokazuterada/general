@@ -5,11 +5,13 @@
   background-image: linear-gradient($top_color, $bottom_color)
   background: -moz-linear-gradient(top, $top_color, $bottom_color)
 
-=grad_img($img_url, $top_color: #ffffff, $bottom_color: #e6e6e6)
+=grad_img($img_url, $top_color: #ffffff, $bottom_color: #e6e6e6, $img_width: none, $img_height: none)
   background-color: $bottom_color
   background-image: url($img_url), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $top_color), color-stop(100%, $bottom_color))
   background-image: url($img_url), -webkit-linear-gradient($top_color, $bottom_color)
   background-image: url($img_url), linear-gradient($top_color, $bottom_color)
+  @if $img_width != none && $img_height != none
+    background-size:  $img_width $img_height, 100% 100%
 
 =gradPer($top_color: #ffffff, $per : 50%, $bottom_color: #e6e6e6)
   background: -webkit-linear-gradient($top_color $per, $bottom_color 100%)
