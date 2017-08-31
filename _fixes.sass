@@ -24,13 +24,18 @@ a span
 .overlay
   cursor: pointer // iOSのSafariでクリックイベントが拾えるように
 
+/*
+
+下記、boagworld.comの記事にも追記されているが、すでに解決されているっぽいのでコメントアウト
+
 // iOSでページロード直後に勝手にリサイズが発生し、
 // その結果、最終的に半端な位置までスクロールしてしまう症状の対策
 // https://boagworld.com/dev/ios-safari-resizing-issues/
 html,body
-  overflow: auto
+  overflow: auto // この行のせいで、iOSで一番上までスクロールした状態で更に上に行こうと引っ張ると、ヘッダー部分が隠れてしまう（消えてしまう）症状が起こるので注意
   margin: 0
   -webkit-overflow-scrolling: touch
   // 下記も上の記事に含まれていたが、なくても動作してるっぽいのと
   // これがあると、結構他の部分のスタイルに影響が出てくるのでコメントアウトしている
   // height: 100%
+*/
