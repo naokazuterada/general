@@ -9,6 +9,11 @@
   clear      : left;
   height     : 0;
   visibility : hidden;
+
+  // フッターなどに適用すると下に隙間ができてしまう問題への対応
+  overflow: hidden;
+  font-size: 0.1em;
+  line-height: 0;
 }
 
 // float:right のみクリア
@@ -19,6 +24,11 @@
   clear      : right;
   height     : 0;
   visibility : hidden;
+
+  // フッターなどに適用すると下に隙間ができてしまう問題への対応
+  overflow: hidden;
+  font-size: 0.1em;
+  line-height: 0;
 }
 
 // float 両方クリア
@@ -29,6 +39,11 @@
   clear      : both;
   height     : 0;
   visibility : hidden;
+
+  // フッターなどに適用すると下に隙間ができてしまう問題への対応
+  overflow: hidden;
+  font-size: 0.1em;
+  line-height: 0;
 }
 
 .clf {
