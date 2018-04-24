@@ -71,15 +71,15 @@
   span
     display: none
 
-=bg2x($path, $ext: "png", $w: auto, $h: auto, $pos: center, $repeat: no-repeat)
+=bg2x($path, $extension, $size: auto auto, $position: center, $repeat: no-repeat)
 
-  $at1x_path: "#{$path}.#{$ext}"
-  $at2x_path: "#{$path}@2x.#{$ext}"
+  $at1x_path: "#{$path}.#{$extension}"
+  $at2x_path: "#{$path}@2x.#{$extension}"
 
   background-image: url("#{$at1x_path}")
-  background-size: $w $h
-  background-position: $pos
-  background-repeat: $repeat
+  background-size: unquote($size)
+  background-position: unquote($position)
+  background-repeat: unquote($repeat)
 
   @media all and (-webkit-min-device-pixel-ratio : 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5)
     background-image: url("#{$at2x_path}")
