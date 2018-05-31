@@ -100,12 +100,18 @@
 
 // フォントのアンチエイリアス
 =font-smoothing($type)
-  @if $type == 'subpixel-antialiased'
+  @if $type == subpixel-antialiased
     -webkit-font-smoothing: subpixel-antialiased
     -moz-osx-font-smoothing: unset
-  @if $type == 'antialiased'
+  @else if $type == antialiased
     -webkit-font-smoothing: antialiased
     -moz-osx-font-smoothing: grayscale
+  @else
+    @error "Sorry, but `#{$type}` is not a valid value for $type."
+
+=text-align-justify
+  text-align: justify
+  text-justify: inter-ideograph // for IE, Edge
 
 // 画面サイズが小さいときのスタイルをインラインで定義するためのmixin
 =on_small_window
