@@ -119,10 +119,16 @@
 //   inter-word: 単語の間隔のみを均等割付
 //   kashida: 単語と文字それぞれの間隔で均等割付（アラビア語向け）
 //   newspaper: 最終行も含め単語と文字それぞれの間隔で均等割付（英文向け）
-=text-align-justify($value: inter-ideograph)
+=text-align-justify($value: inter-ideograph, $ie_support: true)
   text-align: justify
   // for IE, Edge
   text-justify: $value
+  // IE, Edgeでは、font-feature-settingsが効いていると両端揃えが無効化されるため、ここでデフォルト値に戻す
+  // ただし、bodyに対するクラス付与はjsで行うこと
+  @if $ie_support
+    body.ie &,
+    body.edge &
+      font-feature-settings: normal
 
 // 画面サイズが小さいときのスタイルをインラインで定義するためのmixin
 =on_small_window
