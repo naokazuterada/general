@@ -109,9 +109,20 @@
   @else
     @error "Sorry, but `#{$type}` is not a valid value for $type."
 
-=text-align-justify
+// テキストの両端揃え
+// $value:
+//   auto: 通常表示（初期値）
+//   distribute: 単語と文字それぞれの間隔で均等割付
+//   distribute-all-lines: 単語と文字それぞれの間隔で均等割付（最終行も含める）
+//   inter-cluster: 最終行も含め均等割付（単語間隔をもたない言語向け）
+//   inter-ideograph: 単語と文字それぞれの間隔で均等割付（日本語・中国語・韓国語向け）
+//   inter-word: 単語の間隔のみを均等割付
+//   kashida: 単語と文字それぞれの間隔で均等割付（アラビア語向け）
+//   newspaper: 最終行も含め単語と文字それぞれの間隔で均等割付（英文向け）
+=text-align-justify($value: inter-ideograph)
   text-align: justify
-  text-justify: inter-ideograph // for IE, Edge
+  // for IE, Edge
+  text-justify: $value
 
 // 画面サイズが小さいときのスタイルをインラインで定義するためのmixin
 =on_small_window
