@@ -165,10 +165,16 @@
   @keyframes #{$name}
     @content
 
-=animation($animation-name)
-  -webkit-animation: $animation-name
-  -moz-animation: $animation-name
-  animation: $animation-name
+=animation($name)
+  -webkit-animation: $name
+  -moz-animation: $name
+  -ms-animation: $name
+  animation: $name
+=transform-origin($val)
+  -webkit-transform-origin: $val
+  -moz-transform-origin: $val
+  -ms-transform-origin: $val
+  transform-origin: $val
 
 =sp($max_width: 800px)
   @media only screen and (max-width: $max_width), (max-device-width: $max_width)
