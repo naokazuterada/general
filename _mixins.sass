@@ -71,6 +71,12 @@
   span
     display: none
 
+@function _unquote($val)
+  @if type-of($val) == string
+    @return unquote($val)
+  @else
+    @return $val
+
 =bg2x($path, $extension, $size: auto auto, $position: center, $repeat: no-repeat)
 
   $at1x_path: "#{$path}.#{$extension}"
@@ -78,20 +84,9 @@
 
   background-image: url("#{$at1x_path}")
 
-  @if type-of($size) == string
-    background-size: unquote($size)
-  @else
-    background-size: $size
-
-  @if type-of($position) == string
-    background-position: unquote($position)
-  @else
-    background-position: $position
-
-  @if type-of($repeat) == string
-    background-repeat: unquote($repeat)
-  @else
-    background-repeat: $repeat
+  background-size: _unquote($size)
+  background-position: _unquote($position)
+  background-repeat: _unquote($repeat)
 
   @media all and (-webkit-min-device-pixel-ratio : 1.5), all and (-o-min-device-pixel-ratio: 3/2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5)
     background-image: url("#{$at2x_path}")
