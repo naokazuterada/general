@@ -186,6 +186,9 @@
 =sp($max_width: 800px)
   @media only screen and (max-width: $max_width)
     @content
+=pc($min_width: 801px)
+  @media only screen and (min-width: $min_width)
+    @content
 
 // Photoshopのトラッキング（単位なし）をそのまま引数で渡せば、適切な値に変換してくれる関数
 @function tracking($val)
