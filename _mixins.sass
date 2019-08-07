@@ -194,6 +194,10 @@
 =min($args...)
   +pc($args...)
 
+=print
+  @media print
+    @content
+
 // Photoshopのトラッキング（単位なし）をそのまま引数で渡せば、適切な値に変換してくれる関数
 @function tracking($val)
   @return #{$val/1000}em
