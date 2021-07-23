@@ -224,6 +224,10 @@
     background-size: ($stripe+$spacing)*1px ($width)*1px
     background-position: ($stripe)*1px $pos
 
+// アスペクト比を固定したい要素につける。
+// 汎用的なアスペクト比は、別途 _aspect-ration.sass に定義しているので、そちらを読み込んで使用するのでよい。
+// 汎用性の低いアスペクト比の場合は、この関数を直接使うとよい。
+// Ref: https://css-tricks.com/aspect-ratio-boxes/
 =aspect($width, $height)
   height: 0
   overflow: hidden
