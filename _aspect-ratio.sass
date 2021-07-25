@@ -5,5 +5,5 @@ $patterns: '4_3', '16_9'
 $w:        4,     16
 $h:        3,     9
 @for $i from 1 through length($patterns)
-  .aspect_#{nth($patterns, $i)}
+  .aspect-#{nth($patterns, $i)}
     +aspect(nth($w, $i), nth($h, $i))
