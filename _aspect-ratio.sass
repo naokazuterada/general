@@ -1,9 +1,9 @@
 @import mixins
 
 // アスペクト比を固定したい要素に .aspect_4_3 クラス付与みたいな感じで使う
-$patterns: '4_3', '16_9'
-$w:        4,     16
-$h:        3,     9
+$patterns: '3_2', '4_3', '16_9'
+$w:        3,     4,     16
+$h:        2,     3,     9
 @for $i from 1 through length($patterns)
   .aspect-#{nth($patterns, $i)}
     +aspect(nth($w, $i), nth($h, $i))
