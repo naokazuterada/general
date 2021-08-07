@@ -232,3 +232,25 @@
   height: 0
   padding-top: calc(#{$height / $width} * 100%)
   position: relative
+
+// Usege
+// +placeholder
+//   font-family: sans-serif
+//   color: gray
+=placeholder
+  $elements: input, textarea
+  @each $el in $elements
+    // セレクタをカンマでまとめるとNG Ref: https://www.kopjapan.com/blog/web/56/
+    ::placeholder
+      opacity: 1 // for Firefox
+      @content
+    #{$el}::-webkit-input-placeholder
+      @content
+    #{$el}:-moz-placeholder
+      opacity: 1 // for Firefox
+      @content
+    #{$el}::-moz-placeholder
+      opacity: 1 // for Firefox
+      @content
+    #{$el}:-ms-input-placeholder
+      @content
