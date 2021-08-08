@@ -183,17 +183,6 @@
   -ms-transform-origin: $val
   transform-origin: $val
 
-=sp($max_width: 800px)
-  @media only screen and (max-width: $max_width)
-    @content
-=max($args...)
-  +sp($args...)
-=pc($min_width: 801px)
-  @media only screen and (min-width: $min_width)
-    @content
-=min($args...)
-  +pc($args...)
-
 =en
   html[lang=en] &
     @content
