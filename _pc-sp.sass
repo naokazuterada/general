@@ -32,3 +32,6 @@ $pc_sp_threshold: 800px !default
     @content
 =min($args...)
   +pc($args...)
+=min_max($min_width, $max_width)
+  @media only screen and (max-width: $max_width) and (min-width: $min_width)
+    @content
