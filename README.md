@@ -4,7 +4,7 @@ general stylesheet
 
 ## Getting started
 
-### Sageプリオジェクトの場合
+### Sageプロジェクトの場合
 
 Sageのプロジェクトをセットアップした状態から、themeディレクトリ直下にサブモジュールとして追加
   ```
