@@ -27,11 +27,15 @@ $pc_sp_threshold: 800px !default
     @content
 =max($args...)
   +sp($args...)
+    @content
+
 =pc($min_width: #{$pc_sp_threshold + 1px})
   @media only screen and (min-width: $min_width)
     @content
 =min($args...)
   +pc($args...)
+    @content
+
 =min_max($min_width, $max_width)
   @media only screen and (max-width: $max_width) and (min-width: $min_width)
     @content
