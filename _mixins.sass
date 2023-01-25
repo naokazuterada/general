@@ -219,7 +219,7 @@
 // Ref: https://css-tricks.com/aspect-ratio-boxes/
 =aspect($width, $height)
   height: 0
-  padding-top: calc($height / $width * 100%)
+  padding-top: calc(#{$height} / #{$width} * 100%)
   position: relative
 
 // Usege
