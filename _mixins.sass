@@ -203,12 +203,12 @@
 =dotted($pos: left, $color: rgba(#000, 1.0), $stripe: 1, $spacing: 4, $width: 1)
   border: none
   @if $pos == left or $pos == right
-    background: linear-gradient(to bottom,$color 0%,$color $stripe/($stripe+$spacing)*100%,transparent $stripe/($stripe+$spacing)*100%,transparent 100%)
+    background: linear-gradient(to bottom, $color 0%, $color calc($stripe / ($stripe + $spacing) * 100%), transparent calc($stripe / ($stripe + $spacing) * 100%),transparent 100%)
     background-repeat: repeat-y
     background-size: ($width)*1px ($stripe+$spacing)*1px
     background-position: $pos ($stripe)*1px
   @else if $pos == top or $pos == bottom
-    background: linear-gradient(to left,$color 0%,$color $stripe/($stripe+$spacing)*100%,transparent $stripe/($stripe+$spacing)*100%,transparent 100%)
+    background: linear-gradient(to left, $color 0%, $color calc($stripe / ($stripe + $spacing) * 100%),transparent calc($stripe / ($stripe + $spacing) * 100%),transparent 100%)
     background-repeat: repeat-x
     background-size: ($stripe+$spacing)*1px ($width)*1px
     background-position: ($stripe)*1px $pos
