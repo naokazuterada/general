@@ -243,3 +243,21 @@
       @content
     #{$el}:-ms-input-placeholder
       @content
+
+// 複数行の省略表示
+// Usage
+//  // 2行まで表示
+//  --font-size: 17px
+//  --line-height: 26px
+//  --max-lines: 2
+//  +multipleRowsEllipsis
+=multipleRowsEllipsis
+  font-size: var(--font-size)
+  line-height: var(--line-height)
+  overflow: hidden
+  display: -webkit-box
+  text-overflow: ellipsis
+  -webkit-box-orient: vertical
+  -webkit-line-clamp: var(--max-lines)
+  /* ブラウザがサポートしていない場合のフェールセーフ */
+  max-height: calc(var(--font-size) * var(--line-height) * var(--max-lines))
