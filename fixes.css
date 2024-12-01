@@ -21,11 +21,6 @@ img {
   align-self: flex-start; /* Flexboxにした時にアスペクト比が維持されない問題への対応 */
 }
 
-/* IEでカーソルが変わらない対策 */
-a span {
-  cursor: pointer;
-}
-
 .overlay {
   cursor: pointer; /* iOSのSafariでクリックイベントが拾えるように */
 }
