@@ -1,9 +1,10 @@
-@import mixins
+@use 'mixins' as mixins
+@use 'sass:list'
 
 // アスペクト比を固定したい要素に .aspect-4_3 クラス付与みたいな感じで使う
 $patterns: '1_1', '3_2', '4_3', '5_3', '16_9', 'a4_tate',  'a4_yoko'
 $w:        1,     3,     4,     5,     16,     1,          1.41421356
 $h:        1,     2,     3,     3,     9,      1.41421356, 1
-@for $i from 1 through length($patterns)
-  .aspect-#{nth($patterns, $i)}
-    +aspect(nth($w, $i), nth($h, $i))
+@for $i from 1 through list.length($patterns)
+  .aspect-#{list.nth($patterns, $i)}
+    +mixins.aspect(list.nth($w, $i), list.nth($h, $i))
