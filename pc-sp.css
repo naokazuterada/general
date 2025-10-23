@@ -1,9 +1,10 @@
 /* PC/SP display switching */
 /* 閾値を800pxにしているが、異なる場合はその部分のみ書き換えてコピペすること */
+
+/* inline要素 */
 a.sp, abbr.sp, acronym.sp, audio.sp, b.sp, bdi.sp, bdo.sp, big.sp, br.sp, button.sp, canvas.sp, cite.sp, code.sp, data.sp, datalist.sp, del.sp, dfn.sp, em.sp, embed.sp, i.sp, iframe.sp, img.sp, input.sp, ins.sp, kbd.sp, label.sp, map.sp, mark.sp, meter.sp, noscript.sp, object.sp, output.sp, picture.sp, progress.sp, q.sp, ruby.sp, s.sp, samp.sp, script.sp, select.sp, slot.sp, small.sp, span.sp, strong.sp, sub.sp, sup.sp, svg.sp, template.sp, textarea.sp, time.sp, u.sp, tt.sp, var.sp, video.sp, wbr.sp {
   display: none;
 }
-
 @media (width <= 800px) {
   a.sp, abbr.sp, acronym.sp, audio.sp, b.sp, bdi.sp, bdo.sp, big.sp, br.sp, button.sp, canvas.sp, cite.sp, code.sp, data.sp, datalist.sp, del.sp, dfn.sp, em.sp, embed.sp, i.sp, iframe.sp, img.sp, input.sp, ins.sp, kbd.sp, label.sp, map.sp, mark.sp, meter.sp, noscript.sp, object.sp, output.sp, picture.sp, progress.sp, q.sp, ruby.sp, s.sp, samp.sp, script.sp, select.sp, slot.sp, small.sp, span.sp, strong.sp, sub.sp, sup.sp, svg.sp, template.sp, textarea.sp, time.sp, u.sp, tt.sp, var.sp, video.sp, wbr.sp {
     display: inline;
@@ -13,10 +14,10 @@ a.sp, abbr.sp, acronym.sp, audio.sp, b.sp, bdi.sp, bdo.sp, big.sp, br.sp, button
   }
 }
 
+/* block要素 */
 address.sp, article.sp, aside.sp, blockquote.sp, details.sp, dialog.sp, dd.sp, div.sp, dl.sp, dt.sp, fieldset.sp, figcaption.sp, figure.sp, footer.sp, form.sp, h1.sp, h2.sp, h3.sp, h4.sp, h5.sp, h6.sp, header.sp, hgroup.sp, hr.sp, li.sp, main.sp, nav.sp, ol.sp, p.sp, pre.sp, section.sp, table.sp, ul.sp {
   display: none;
 }
-
 @media (width <= 800px) {
   address.sp, article.sp, aside.sp, blockquote.sp, details.sp, dialog.sp, dd.sp, div.sp, dl.sp, dt.sp, fieldset.sp, figcaption.sp, figure.sp, footer.sp, form.sp, h1.sp, h2.sp, h3.sp, h4.sp, h5.sp, h6.sp, header.sp, hgroup.sp, hr.sp, li.sp, main.sp, nav.sp, ol.sp, p.sp, pre.sp, section.sp, table.sp, ul.sp {
     display: block;
